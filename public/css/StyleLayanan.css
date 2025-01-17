@@ -1,0 +1,217 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A0ADCD;
+    padding: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav {
+    position: absolute; /* Posisikan menu navigasi */
+    left: 50%; /* Menu berada di tengah */
+    transform: translateX(-50%); /* Koreksi agar benar-benar di tengah */
+    display: flex;
+    gap: 50px; /* Jarak antar menu */
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.btn-profile, .btn-logout, .btn-login {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn-profile {
+  background-color: #4CAF50; /* Hijau */
+}
+
+.btn-logout {
+  background-color: #f44336; /* Merah */
+}
+
+.btn-login {
+  background-color: #007BFF; /* Biru */
+}
+
+.btn-profile:hover, .btn-logout:hover, .btn-login:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    grid-gap: 30px; /* Jarak antar kartu */
+    margin: 50px auto;
+    width: 80%;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.service-card .price {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #000;
+}
+
+.service-card button {
+    background-color: #9fa8da;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    background-color: #A0ADCD;
+    color: #333;
+    padding: 30px ;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Jarak antar kolom footer */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Membungkus jika layar kecil */
+    gap: 20px; /* Jarak antar elemen pada layar kecil */
+  }
+  
+  .footer-logo img {
+    width: 120px; 
+    margin-bottom: 15px;
+  }
+  
+  .footer-logo p {
+    margin: 5px 0; /* Jarak antar teks kontak */
+  }
+  
+  
+  .footer-info {
+    max-width: 300px; /* Lebar maksimum kolom */
+  }
+  
+  .footer-info h3 {
+    margin-bottom: 10px; /* Jarak antara judul dan teks */
+  }
+  
+  .social-media h3 {
+    margin-bottom: 10px; /* Jarak antara judul dan ikon */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Jarak antar ikon */
+    flex-wrap: wrap; /* Membungkus ikon pada layar kecil */
+  }
+  
+  .social-icons img {
+    width: 60px; /* Ukuran ikon sosial media */
+    height: 50px;
+    transition: transform 0.3s ease; /* Animasi hover */
+    mix-blend-mode: darken;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1); /* Memperbesar ikon saat hover */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      margin-top: 10px;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu-icon {
+      display: block;
+      font-size: 1.5rem;
+    }
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px;
+    }
+  
+    .hero-content {
+      max-width: 100%;
+    }
+  
+    .hero-illustration img {
+      margin-top: 20px;
+    }
+  
+    .service-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-info {
+      margin: 10px 0;
+    }
+  }
+  
